@@ -1,7 +1,7 @@
-import expertAvatar from './assets/images/expert_avatar_1789983977226.jpg';
-import apothecaryArchive from './assets/images/apothecary_archive_1789983998561.jpg';
-import libraryArchive from './assets/images/library_archive_1789984022059.jpg';
-import valleyDawn from './assets/images/valley_dawn_1789984037607.jpg';
+import avatarImg from './assets/images/expert_avatar_1789988369397.jpg';
+import apothecaryImg from './assets/images/apothecary_archive_1789983998561.jpg';
+import libraryImg from './assets/images/library_archive_1789984022059.jpg';
+import valleyImg from './assets/images/valley_dawn_1789984037607.jpg';
 
 /**
  * WISSENSPORTAL - Central Destination URLs
@@ -38,8 +38,9 @@ export const CONTENT = {
 } as const;
 
 export const ASSETS = {
-  avatar: "/src/assets/images/expert_avatar_1789983977226.jpg",
-  apothecary: "/src/assets/images/apothecary_archive_1789983998561.jpg",
-  library: "/src/assets/images/library_archive_1789984022059.jpg",
-  valley: "/src/assets/images/valley_dawn_1789984037607.jpg",
+  avatar: avatarImg,
+  apothecary: apothecaryImg,
+  library: libraryImg,
+  valley: valleyImg,
 } as const;
+
