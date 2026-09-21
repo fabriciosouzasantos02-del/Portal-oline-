@@ -1,0 +1,6 @@
+{
+  "name": "WISSENSPORTAL",
+  "description": "Willkommen im Wissensportal. Entdecken Sie verborgene Archive, Naturwissen, Schriften und Wissen jenseits des Gewöhnlichen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
