@@ -7,75 +7,30 @@ export const Header: React.FC = () => {
   const { content } = useLanguage();
 
   return (
-    <header id="wissensportal-header" className="relative flex flex-col items-center text-center pt-2 sm:pt-6 pb-3 px-2 sm:px-4 select-none w-full max-w-full">
-      {/* Botanical laurel / wreath glow backdrop */}
-      <div className="relative mb-3 group">
-        {/* Ambient halo behind avatar */}
-        <div 
-          className="absolute -inset-2.5 sm:-inset-3 rounded-full bg-gradient-to-b from-[#263F2E] via-[#C9A45A]/25 to-transparent blur-md pointer-events-none opacity-80"
-          aria-hidden="true" 
-        />
-        
-        {/* Laurel wreath leaves SVG framing the avatar */}
-        <svg 
-          className="absolute -inset-3 sm:-inset-4 w-[calc(100%+24px)] sm:w-[calc(100%+32px)] h-[calc(100%+24px)] sm:h-[calc(100%+32px)] pointer-events-none text-[#263F2E] filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
-          viewBox="0 0 120 120" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Left laurel branch */}
-          <path d="M26 88C18 76 16 60 22 46C24 42 27 38 31 34" stroke="#C9A45A" strokeWidth="1" strokeOpacity="0.4" strokeLinecap="round" />
-          <path d="M18 70C12 68 10 63 12 59C14 55 19 56 22 62" fill="#2E4D38" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-          <path d="M22 82C17 81 14 77 16 73C18 69 23 70 25 76" fill="#263F2E" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-          <path d="M19 56C14 53 13 47 16 44C19 41 24 43 25 50" fill="#2E4D38" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-          <path d="M25 43C21 38 22 32 26 30C30 28 34 32 33 38" fill="#263F2E" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-
-          {/* Right laurel branch */}
-          <path d="M94 88C102 76 104 60 98 46C96 42 93 38 89 34" stroke="#C9A45A" strokeWidth="1" strokeOpacity="0.4" strokeLinecap="round" />
-          <path d="M102 70C108 68 110 63 108 59C106 55 101 56 98 62" fill="#2E4D38" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-          <path d="M98 82C103 81 106 77 104 73C102 69 97 70 95 76" fill="#263F2E" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-          <path d="M101 56C106 53 107 47 104 44C101 41 96 43 95 50" fill="#2E4D38" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
-          <path d="M95 43C99 38 98 32 94 30C90 28 86 32 87 38" fill="#263F2E" stroke="#C9A45A" strokeWidth="0.8" strokeOpacity="0.6" />
+    <header id="wissensportal-header" className="relative flex w-full flex-col items-center px-2 pb-3 pt-5 text-center sm:pb-5 sm:pt-8">
+      <div className="relative mb-4 sm:mb-5">
+        <div className="absolute -inset-5 rounded-full bg-[#C9A45A]/20 blur-2xl" aria-hidden="true" />
+        <svg className="pointer-events-none absolute -inset-5 h-[calc(100%+40px)] w-[calc(100%+40px)] text-[#C9A45A] opacity-90" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <path d="M26 88C16 73 16 55 31 34M94 88C104 73 104 55 89 34" stroke="currentColor" strokeWidth="1.3" strokeOpacity=".65" strokeLinecap="round" />
+          <path d="M18 70C12 68 10 63 12 59C14 55 19 56 22 62M22 82C17 81 14 77 16 73C18 69 23 70 25 76M19 56C14 53 13 47 16 44C19 41 24 43 25 50M25 43C21 38 22 32 26 30C30 28 34 32 33 38" fill="#263F2E" stroke="currentColor" strokeWidth=".8" />
+          <path d="M102 70C108 68 110 63 108 59C106 55 101 56 98 62M98 82C103 81 106 77 104 73C102 69 97 70 95 76M101 56C106 53 107 47 104 44C101 41 96 43 95 50M95 43C99 38 98 32 94 30C90 28 86 32 87 38" fill="#263F2E" stroke="currentColor" strokeWidth=".8" />
         </svg>
-
-        {/* Circular frame with double gold ring */}
-        <div className="relative w-22 h-22 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full p-[3px] bg-gradient-to-b from-[#F3EBDD] via-[#C9A45A] to-[#382116] shadow-[0_8px_25px_rgba(0,0,0,0.85)]">
-          <div className="w-full h-full rounded-full p-[2px] bg-[#07110D]">
-            <img
-              src={ASSETS.avatar}
-              alt="Wissensportal Experte"
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover rounded-full filter contrast-[1.03] brightness-[1.02]"
-              loading="eager"
-            />
+        <div className="relative h-28 w-28 rounded-full bg-gradient-to-b from-[#FFF4D0] via-[#C9A45A] to-[#6F4A19] p-[3px] shadow-[0_10px_30px_rgba(0,0,0,.85)] sm:h-36 sm:w-36">
+          <div className="h-full w-full rounded-full bg-[#07110D] p-[3px]">
+            <img src={ASSETS.avatar} alt="Wissensportal Experte" className="h-full w-full rounded-full object-cover object-center" loading="eager" />
           </div>
         </div>
       </div>
 
-      {/* Main Brand Title */}
-      <h1 
-        id="portal-title" 
-        className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold tracking-[0.14em] sm:tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5DC] via-[#E5C77A] to-[#C9A45A] drop-shadow-[0_2px_14px_rgba(201,164,90,0.35)] mt-0.5 mb-1.5 break-words w-full px-1"
-      >
+      <h1 id="portal-title" className="w-full font-display text-3xl font-bold tracking-[.13em] text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5DC] via-[#E5C77A] to-[#C9A45A] drop-shadow-[0_2px_14px_rgba(201,164,90,.35)] sm:text-5xl sm:tracking-[.18em]">
         {content.header.title}
       </h1>
-
-      {/* Small botanical gold motif */}
-      <div className="flex items-center justify-center my-1 opacity-95">
-        <GoldBotanicalMotif className="w-6 h-3.5 sm:w-8 sm:h-4.5 text-[#C9A45A]" />
+      <div className="my-2 flex items-center justify-center">
+        <GoldBotanicalMotif className="h-4 w-9 text-[#C9A45A] sm:h-5 sm:w-12" />
       </div>
-
-      {/* Subtitle / Portal Greeting */}
-      <div 
-        id="portal-subtitle" 
-        className="text-[#F3EBDD]/90 text-[13px] xs:text-[14px] sm:text-[15.5px] font-normal leading-relaxed w-full max-w-sm sm:max-w-md mx-auto mt-0.5 px-2 font-sans tracking-wide break-words"
-      >
-        <span className="block font-medium text-[#F3EBDD] mb-0.5 text-center">
-          {content.header.welcome}
-        </span>
-        <p className="text-[#E0D7C6]/85 text-center leading-normal">
-          {content.header.subtitle}
-        </p>
+      <div id="portal-subtitle" className="max-w-[680px] px-2 font-editorial text-[18px] leading-tight text-[#F3EBDD] sm:text-[25px] sm:leading-snug">
+        <span className="block">{content.header.welcome}</span>
+        <p className="mt-1 text-[#E0D7C6]">{content.header.subtitle}</p>
       </div>
     </header>
   );

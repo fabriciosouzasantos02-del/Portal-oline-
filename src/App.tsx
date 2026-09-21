@@ -10,29 +10,18 @@ import { LanguageProvider } from './context/LanguageContext';
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="relative min-h-screen min-h-[100dvh] w-full bg-[#07110D] text-[#F3EBDD] overflow-x-hidden flex flex-col items-center">
-        {/* Cinematic Ambient Atmosphere */}
+      <div className="relative min-h-screen min-h-[100dvh] w-full overflow-x-hidden bg-[#07110D] text-[#F3EBDD]">
         <AmbientBackground />
 
-        {/* Main Mobile-First Bio Container */}
-        <div className="relative z-10 w-full max-w-[480px] xs:max-w-[500px] sm:max-w-[540px] mx-auto min-h-screen min-h-[100dvh] flex flex-col justify-between px-3 xs:px-3.5 sm:px-4.5 pt-[max(0.75rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]">
-          
-          {/* Subtle Top Language Selector (Automatic device detection + manual toggle) */}
+        <div className="relative z-10 mx-auto flex min-h-screen min-h-[100dvh] w-full max-w-[960px] flex-col px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-8 lg:px-10">
           <LanguageSelector />
-
-          {/* Header with circular expert portrait & portal title */}
           <Header />
 
-          {/* The Two Main Destination Cards */}
-          <main className="w-full flex flex-col gap-3.5 xs:gap-4 sm:gap-4.5 my-2.5 sm:my-4">
-            {/* Destination 1: DIE VERBOTENE APOTHEKE */}
+          <main className="my-5 flex w-full flex-col gap-5 sm:my-8 sm:gap-7">
             <ApothekeCard />
-
-            {/* Destination 2: VERBORGENE BIBLIOTHEK */}
             <BibliothekCard />
           </main>
 
-          {/* Footer with Mandated Archival Quote & Horizon Vista */}
           <Footer />
         </div>
       </div>

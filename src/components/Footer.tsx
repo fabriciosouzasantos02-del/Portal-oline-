@@ -7,10 +7,10 @@ export const Footer: React.FC = () => {
   const { content } = useLanguage();
 
   return (
-    <footer id="wissensportal-footer" className="relative w-full pt-6 sm:pt-10 pb-2 mt-4 sm:mt-6 overflow-hidden select-none max-w-full">
+    <footer id="wissensportal-footer" className="relative mt-5 w-full max-w-full select-none overflow-hidden pb-2 pt-6 sm:mt-8 sm:pt-10">
       {/* Central Philosophical Archival Quote */}
       <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto px-4 text-center z-10">
-        <blockquote className="font-editorial italic text-[13.5px] xs:text-[14.5px] sm:text-[16px] md:text-[17px] leading-[1.6] sm:leading-[1.7] text-[#E5C77A]/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-normal tracking-wide break-words">
+        <blockquote className="break-words font-editorial text-[17px] font-normal italic leading-[1.35] tracking-wide text-[#E5C77A]/95 drop-shadow-[0_2px_8px_rgba(0,0,0,.8)] sm:text-[23px] sm:leading-[1.45]">
           <p className="mb-0">
             {content.footer.quote}
           </p>
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Cinematic Golden Sunrise Valley Horizon at the bottom */}
-      <div className="relative w-full mt-2 sm:mt-3 aspect-[16/8] xs:aspect-[16/7] sm:aspect-[16/6] max-h-[190px] sm:max-h-[240px] overflow-hidden rounded-b-xl">
+      <div className="relative mt-3 aspect-[16/7] w-full max-h-[280px] overflow-hidden rounded-b-xl sm:mt-5 sm:aspect-[16/5.5]">
         {/* Soft top gradient to blend landscape smoothly into page background */}
         <div 
           className="absolute inset-x-0 top-0 h-14 sm:h-20 bg-gradient-to-b from-[#07110D] via-[#07110D]/75 to-transparent z-[2] pointer-events-none" 
