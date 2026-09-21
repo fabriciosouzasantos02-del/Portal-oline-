@@ -12,11 +12,11 @@ export const AmbientBackground: React.FC = () => {
     let frame = 0;
     let width = 0;
     let height = 0;
-    const particles = Array.from({ length: 28 }, () => ({
+    const particles = Array.from({ length: 24 }, () => ({
       x: Math.random(),
       y: Math.random(),
-      size: Math.random() * 1.5 + 0.5,
-      speed: Math.random() * 0.00035 + 0.0001,
+      size: Math.random() * 1.3 + 0.5,
+      speed: Math.random() * 0.0003 + 0.0001,
       phase: Math.random() * Math.PI * 2,
     }));
 
@@ -37,7 +37,7 @@ export const AmbientBackground: React.FC = () => {
         particle.y -= particle.speed;
         if (particle.y < -0.02) particle.y = 1.02;
         particle.phase += 0.018;
-        ctx.fillStyle = `rgba(229, 199, 122, ${0.08 + Math.sin(particle.phase) * 0.04})`;
+        ctx.fillStyle = `rgba(229, 199, 122, ${0.06 + Math.sin(particle.phase) * 0.03})`;
         ctx.beginPath();
         ctx.arc(particle.x * width, particle.y * height, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -58,14 +58,14 @@ export const AmbientBackground: React.FC = () => {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#07110D]" aria-hidden="true">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-screen"
-        style={{ backgroundImage: `url(${ASSETS.apothecary})` }}
+        className="absolute inset-x-0 top-0 min-h-full bg-[position:top_center] bg-no-repeat"
+        style={{
+          backgroundImage: `url(${ASSETS.portalBackground})`,
+          backgroundSize: '100% auto',
+        }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_8%,rgba(75,91,47,.38),transparent_34%),linear-gradient(180deg,rgba(4,9,6,.46),#07110D_48%,#050806_100%)]" />
-      <div className="absolute -left-24 top-0 h-[42rem] w-72 rotate-[-14deg] rounded-full bg-[#183523]/50 blur-3xl" />
-      <div className="absolute -right-24 top-10 h-[38rem] w-72 rotate-[14deg] rounded-full bg-[#102719]/60 blur-3xl" />
-      <canvas ref={canvasRef} className="absolute inset-0 opacity-80" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(0,0,0,.72)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#07110D]/25" />
+      <canvas ref={canvasRef} className="absolute inset-0 opacity-50" />
     </div>
   );
 };
