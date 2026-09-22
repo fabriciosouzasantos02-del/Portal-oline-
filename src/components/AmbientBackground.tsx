@@ -56,15 +56,18 @@ export const AmbientBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#07110D]" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
       <div
-        className="absolute inset-x-0 top-0 min-h-full bg-[position:top_center] bg-no-repeat"
+        className="absolute inset-0 bg-no-repeat"
         style={{
           backgroundImage: `url(${ASSETS.portalBackground})`,
-          backgroundSize: '100% auto',
+          // Stretch only the background layer to the document's measured height.
+          // This keeps the title, cards and sunset attached while the page scrolls.
+          backgroundPosition: 'top center',
+          backgroundSize: '100% 100%',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#07110D]/25" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#07110D]/20" />
       <canvas ref={canvasRef} className="absolute inset-0 opacity-50" />
     </div>
   );
