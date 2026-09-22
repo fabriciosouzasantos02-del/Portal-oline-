@@ -61,10 +61,10 @@ export const AmbientBackground: React.FC = () => {
         className="absolute inset-0 bg-no-repeat"
         style={{
           backgroundImage: `url(${ASSETS.portalBackground})`,
-          // Stretch only the background layer to the document's measured height.
-          // This keeps the title, cards and sunset attached while the page scrolls.
           backgroundPosition: 'top center',
-          backgroundSize: '100% 100%',
+          // Keep the source image's 2:3 ratio. On narrow screens the sides crop,
+          // rather than stretching the portrait and the character's face.
+          backgroundSize: 'auto 100%',
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#07110D]/20" />
