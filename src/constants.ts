@@ -4,6 +4,7 @@ import libraryImg from './assets/images/library_archive_1789984022059.jpg';
 import valleyImg from './assets/images/valley_dawn_1789984037607.jpg';
 import portalBackgroundImg from './assets/images/portal-background.png';
 import apothekeCardImg from './assets/images/apotheke-card-reference.png';
+import bibliothekCardImg from './assets/images/bibliothek-card-reference.png';
 
 /**
  * WISSENSPORTAL - Central Destination URLs
@@ -46,4 +47,5 @@ export const ASSETS = {
   valley: valleyImg,
   portalBackground: portalBackgroundImg,
   apothekeCard: apothekeCardImg,
+  bibliothekCard: bibliothekCardImg,
 } as const;
