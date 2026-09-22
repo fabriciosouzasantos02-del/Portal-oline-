@@ -62,9 +62,9 @@ export const AmbientBackground: React.FC = () => {
         style={{
           backgroundImage: `url(${ASSETS.portalBackground})`,
           backgroundPosition: 'top center',
-          // Keep the source image's 2:3 ratio. On narrow screens the sides crop,
-          // rather than stretching the portrait and the character's face.
-          backgroundSize: 'auto 100%',
+          // The source artwork is 2:3. Scale it from the viewport width so the
+          // avatar, title, and horizon never stretch or get cropped on in-app browsers.
+          backgroundSize: '100% auto',
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#07110D]/20" />
