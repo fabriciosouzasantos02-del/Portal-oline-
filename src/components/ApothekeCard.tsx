@@ -20,7 +20,11 @@ export const ApothekeCard: React.FC = () => {
         />
 
         {/* The supplied artwork leaves a clean area above its built-in button. */}
-        <p className="pointer-events-none absolute left-[52%] right-[8%] top-[51%] m-0 max-h-[15%] overflow-hidden text-center font-editorial text-[clamp(8px,1.15vw,17px)] font-medium italic leading-[1.12] text-[#F3EBDD] drop-shadow-[0_2px_5px_rgba(0,0,0,.95)] sm:text-[clamp(11px,1.3vw,18px)]">
+        <p className="pointer-events-none absolute left-[52%] right-[8%] top-[49%] m-0 hidden max-h-[18%] overflow-hidden text-center font-editorial text-[clamp(15px,1.75vw,23px)] font-medium italic leading-[1.14] text-[#F3EBDD] drop-shadow-[0_2px_5px_rgba(0,0,0,.98)] sm:block">
+          {CONTENT.card1.description}
+        </p>
+
+        <p className="m-0 border-t border-[#C9A45A]/45 bg-[#07130D] px-5 py-4 text-center font-editorial text-[18px] font-medium italic leading-[1.3] text-[#F3EBDD] drop-shadow-[0_2px_4px_rgba(0,0,0,.9)] sm:hidden">
           {CONTENT.card1.description}
         </p>
       </a>
