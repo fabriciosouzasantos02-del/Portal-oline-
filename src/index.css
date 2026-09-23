@@ -79,3 +79,9 @@
     inset 0 1px 1px rgba(201, 164, 90, 0.2);
 }
 
+/* Desktop-only alignment: the title is part of the background artwork. */
+@media (min-width: 768px) {
+  #wissensportal-header {
+    padding-top: clamp(16rem, calc(35vw + 2rem), 24rem) !important;
+  }
+}
