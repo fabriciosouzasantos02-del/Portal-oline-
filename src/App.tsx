@@ -16,8 +16,8 @@ export default function App() {
           <Header />
 
           <main className="mx-auto flex w-full max-w-[820px] flex-col gap-5 sm:gap-7">
-            <ApothekeCard />
             <BibliothekCard />
+            <ApothekeCard />
           </main>
 
           <Footer />
