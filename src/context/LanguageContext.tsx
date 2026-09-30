@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { detectUserLanguage, LanguageContent, saveUserLanguage, SupportedLanguage, TRANSLATIONS } from '../i18n';
+import React, { createContext, useContext, useState } from 'react';
+import { LanguageContent, SupportedLanguage, TRANSLATIONS } from '../i18n';
 
 interface LanguageContextType {
   language: SupportedLanguage;
@@ -16,14 +16,8 @@ const LanguageContext = createContext<LanguageContextType>({
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<SupportedLanguage>('de');
 
-  useEffect(() => {
-    const detected = detectUserLanguage();
-    setLanguageState(detected);
-  }, []);
-
   const setLanguage = (lang: SupportedLanguage) => {
     setLanguageState(lang);
-    saveUserLanguage(lang);
   };
 
   return (

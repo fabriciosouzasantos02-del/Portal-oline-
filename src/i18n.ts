@@ -1,7 +1,7 @@
 /**
  * Internationalization (i18n) for WISSENSPORTAL
  * Supported languages: German (de - Default), English (en), Portuguese (pt), French (fr), Spanish (es).
- * Automatically detects the user's device/browser language (including TikTok/IG/FB in-app browsers).
+ * The page always renders in German by default. Visitors may use their browser's native translation.
  */
 
 export type SupportedLanguage = 'de' | 'en' | 'pt' | 'fr' | 'es';
@@ -173,55 +173,3 @@ export const TRANSLATIONS: Record<SupportedLanguage, LanguageContent> = {
     },
   },
 };
-
-/**
- * Detects the user's preferred language.
- * Default fallback is German ('de') as mandated.
- */
-export function detectUserLanguage(): SupportedLanguage {
-  // 1. Check local storage preference
-  try {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      const saved = localStorage.getItem('wissensportal_language');
-      if (saved && (saved in TRANSLATIONS)) {
-        return saved as SupportedLanguage;
-      }
-    }
-  } catch {
-    // Storage access might be restricted in some webview sandboxes
-  }
-
-  // 2. Check browser / device / webview language
-  try {
-    if (typeof navigator !== 'undefined') {
-      const candidateLanguages = navigator.languages && navigator.languages.length > 0
-        ? navigator.languages
-        : [navigator.language];
-
-      for (const lang of candidateLanguages) {
-        if (!lang) continue;
-        const normalized = lang.toLowerCase().trim();
-        if (normalized.startsWith('pt')) return 'pt';
-        if (normalized.startsWith('en')) return 'en';
-        if (normalized.startsWith('fr')) return 'fr';
-        if (normalized.startsWith('es')) return 'es';
-        if (normalized.startsWith('de')) return 'de';
-      }
-    }
-  } catch {
-    // Fallback to default
-  }
-
-  // 3. Mandated default language is German
-  return 'de';
-}
-
-export function saveUserLanguage(lang: SupportedLanguage): void {
-  try {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      localStorage.setItem('wissensportal_language', lang);
-    }
-  } catch {
-    // Ignore restricted webview errors
-  }
-}
