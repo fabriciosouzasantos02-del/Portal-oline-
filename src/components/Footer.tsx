@@ -9,10 +9,10 @@ const SOCIAL_LINKS: ReadonlyArray<{
   href: string;
   icon: SocialIconName;
 }> = [
-  { label: 'Facebook', href: 'https://www.facebook.com/share/1JCaxgPsen/', icon: 'facebook' },
-  { label: 'Instagram', href: 'https://www.instagram.com/wissens.portal?stkn=MWFsbHJrenlweHYzcQ==', icon: 'instagram' },
+  { label: 'Facebook', href: 'https://www.facebook.com/share/1JatTEH8ZS/', icon: 'facebook' },
+  { label: 'Instagram', href: 'https://www.instagram.com/wissens.portal.offiziell?stkn=MWFsbHJrenlweHYzcQ==', icon: 'instagram' },
   { label: 'WhatsApp', href: 'https://wa.me/4915219451494', icon: 'whatsapp' },
-  { label: 'YouTube', href: 'https://youtube.com/@wissens-portal-orbita?si=34mqSDXzF-tc5RYB', icon: 'youtube' },
+  { label: 'YouTube', href: 'https://youtube.com/@wissens.portal.offiziell?si=OrZ9D04v0TLNMZXP', icon: 'youtube' },
   { label: 'TikTok', href: 'https://www.tiktok.com/@wissensportal?_r=1&_t=ZG-9AAdG18WG8H', icon: 'tiktok' },
   { label: 'E-mail', href: 'mailto:unterstutzung.service@gmail.com', icon: 'email' },
 ];
