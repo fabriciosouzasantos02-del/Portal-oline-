@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { GoldBotanicalMotif } from './Icons';
 
-type SocialIconName = 'facebook' | 'instagram' | 'whatsapp' | 'youtube' | 'tiktok' | 'email';
+type SocialIconName = 'facebook' | 'instagram' | 'youtube' | 'tiktok' | 'email';
 
 const SOCIAL_LINKS: ReadonlyArray<{
   label: string;
@@ -11,7 +11,6 @@ const SOCIAL_LINKS: ReadonlyArray<{
 }> = [
   { label: 'Facebook', href: 'https://www.facebook.com/share/1JatTEH8ZS/', icon: 'facebook' },
   { label: 'Instagram', href: 'https://www.instagram.com/wissens.portal.offiziell?stkn=MWFsbHJrenlweHYzcQ==', icon: 'instagram' },
-  { label: 'WhatsApp', href: 'https://wa.me/4915219451494', icon: 'whatsapp' },
   { label: 'YouTube', href: 'https://youtube.com/@wissens.portal.offiziell?si=OrZ9D04v0TLNMZXP', icon: 'youtube' },
   { label: 'TikTok', href: 'https://www.tiktok.com/@wissensportal?_r=1&_t=ZG-9AAdG18WG8H', icon: 'tiktok' },
   { label: 'E-mail', href: 'mailto:unterstutzung.service@gmail.com', icon: 'email' },
@@ -30,8 +29,6 @@ const SocialIcon: React.FC<{ name: SocialIconName }> = ({ name }) => {
       return <svg {...commonProps}><path d="M13.5 21v-8h2.75l.5-3h-3.25V8.05c0-.87.28-1.47 1.55-1.47h1.65V3.9c-.29-.04-1.28-.13-2.43-.13-2.4 0-4.05 1.47-4.05 4.17V10H8v3h2.22v8h3.28Z" /></svg>;
     case 'instagram':
       return <svg {...commonProps} fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3.1" y="3.1" width="17.8" height="17.8" rx="5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.65" cy="6.45" r="1" fill="currentColor" stroke="none" /></svg>;
-    case 'whatsapp':
-      return <svg {...commonProps}><path d="M12 2.25a9.72 9.72 0 0 0-8.36 14.67L2.5 21.5l4.7-1.1A9.75 9.75 0 1 0 12 2.25Zm0 17.7a7.92 7.92 0 0 1-4.04-1.1l-.29-.17-2.79.65.67-2.72-.19-.3A7.92 7.92 0 1 1 12 19.95Zm4.35-5.94c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.48-.4-.42-.54-.43h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" /></svg>;
     case 'youtube':
       return <svg {...commonProps}><path d="M21.58 7.19a2.98 2.98 0 0 0-2.1-2.1C17.63 4.6 12 4.6 12 4.6s-5.63 0-7.48.49a2.98 2.98 0 0 0-2.1 2.1C1.93 9.04 1.93 12 1.93 12s0 2.96.49 4.81a2.98 2.98 0 0 0 2.1 2.1c1.85.49 7.48.49 7.48.49s5.63 0 7.48-.49a2.98 2.98 0 0 0 2.1-2.1c.49-1.85.49-4.81.49-4.81s0-2.96-.49-4.81ZM10.1 15.1V8.9l5.2 3.1-5.2 3.1Z" /></svg>;
     case 'tiktok':
