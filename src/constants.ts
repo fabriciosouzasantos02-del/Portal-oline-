@@ -1,10 +1,10 @@
-import avatarImg from './assets/images/expert_avatar_1789988369397.jpg';
-import apothecaryImg from './assets/images/apothecary_archive_1789983998561.jpg';
-import libraryImg from './assets/images/library_archive_1789984022059.jpg';
-import valleyImg from './assets/images/valley_dawn_1789984037607.jpg';
-import portalBackgroundImg from './assets/images/portal-background.png';
-import apothekeCardImg from './assets/images/apotheke-card-reference.png';
-import bibliothekCardImg from './assets/images/bibliothek-card-reference.png';
+import portalBackgroundImg from './assets/images/portal-background.webp';
+import apothekeCard800Img from './assets/images/apotheke-card-reference-800.webp';
+import apothekeCard1200Img from './assets/images/apotheke-card-reference-1200.webp';
+import apothekeCardImg from './assets/images/apotheke-card-reference.webp';
+import bibliothekCard800Img from './assets/images/bibliothek-card-reference-800.webp';
+import bibliothekCard1200Img from './assets/images/bibliothek-card-reference-1200.webp';
+import bibliothekCardImg from './assets/images/bibliothek-card-reference.webp';
 
 /**
  * WISSENSPORTAL - Central Destination URLs
@@ -41,11 +41,11 @@ export const CONTENT = {
 } as const;
 
 export const ASSETS = {
-  avatar: avatarImg,
-  apothecary: apothecaryImg,
-  library: libraryImg,
-  valley: valleyImg,
   portalBackground: portalBackgroundImg,
+  apothekeCard800: apothekeCard800Img,
+  apothekeCard1200: apothekeCard1200Img,
   apothekeCard: apothekeCardImg,
+  bibliothekCard800: bibliothekCard800Img,
+  bibliothekCard1200: bibliothekCard1200Img,
   bibliothekCard: bibliothekCardImg,
 } as const;

@@ -14,9 +14,14 @@ export const BibliothekCard: React.FC = () => {
       >
         <img
           src={ASSETS.bibliothekCard}
+          srcSet={`${ASSETS.bibliothekCard800} 800w, ${ASSETS.bibliothekCard1200} 1200w, ${ASSETS.bibliothekCard} 1672w`}
+          sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 64px), 820px"
+          width={1672}
+          height={941}
           alt="Verborgene Bibliothek – Wissen um den Heiligen Gral"
           className="block h-auto w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.01]"
           loading="lazy"
+          decoding="async"
         />
 
         {/* The supplied artwork leaves a clean area above its built-in button. */}

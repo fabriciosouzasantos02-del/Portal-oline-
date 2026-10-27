@@ -14,9 +14,14 @@ export const ApothekeCard: React.FC = () => {
       >
         <img
           src={ASSETS.apothekeCard}
+          srcSet={`${ASSETS.apothekeCard800} 800w, ${ASSETS.apothekeCard1200} 1200w, ${ASSETS.apothekeCard} 1672w`}
+          sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 64px), 820px"
+          width={1672}
+          height={941}
           alt="Die verbotene Apotheke – Archiv 1910"
           className="block h-auto w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.01]"
-          loading="eager"
+          loading="lazy"
+          decoding="async"
         />
 
         {/* The supplied artwork leaves a clean area above its built-in button. */}
