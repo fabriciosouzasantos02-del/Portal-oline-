@@ -18,17 +18,11 @@ export interface LanguageContent {
     subtitle: string;
   };
   card1: {
-    title: string;
-    subtitle: string;
     description: string;
-    buttonText: string;
     imageAlt: string;
   };
   card2: {
-    title: string;
-    subtitle: string;
     description: string;
-    buttonText: string;
     imageAlt: string;
   };
   footer: {
@@ -76,17 +70,11 @@ export const TRANSLATIONS: Record<SupportedLanguage, LanguageContent> = {
       subtitle: 'Hier finden Sie Informationen, Wissen und verborgene Wahrheiten.',
     },
     card1: {
-      title: 'DIE VERBOTENE APOTHEKE',
-      subtitle: 'Archiv 1910–',
       description: 'Die verborgene Wahrheit der Natur. Wissen und Techniken, die Ihnen niemals hätten vorenthalten werden dürfen.',
-      buttonText: 'Archiv öffnen →',
       imageAlt: 'Die verbotene Apotheke – Archiv 1910',
     },
     card2: {
-      title: 'Verborgene Bibliothek',
-      subtitle: 'Wissen um den Heiligen Gral.',
       description: 'Verborgene Schriften, geheime Zivilisationen, verbotenes Wissen, spirituelle Wahrheiten.',
-      buttonText: 'Bibliothek betreten →',
       imageAlt: 'Verborgene Bibliothek – Wissen um den Heiligen Gral',
     },
     footer: {
@@ -111,17 +99,11 @@ export const TRANSLATIONS: Record<SupportedLanguage, LanguageContent> = {
       subtitle: 'Here you will find information, knowledge and hidden truths.',
     },
     card1: {
-      title: 'THE FORBIDDEN APOTHECARY',
-      subtitle: 'Archive 1910–',
       description: 'The hidden truth of nature. Knowledge and techniques that should never have been withheld from you.',
-      buttonText: 'Open the Archive →',
       imageAlt: 'The Forbidden Apothecary – Archive 1910',
     },
     card2: {
-      title: 'Hidden Library',
-      subtitle: 'Knowledge of the Holy Grail.',
       description: 'Hidden writings, secret civilizations, forbidden knowledge and spiritual truths.',
-      buttonText: 'Enter the Library →',
       imageAlt: 'Hidden Library – Knowledge of the Holy Grail',
     },
     footer: {
@@ -146,18 +128,12 @@ export const TRANSLATIONS: Record<SupportedLanguage, LanguageContent> = {
       subtitle: 'Vous y trouverez des informations, des connaissances et des vérités cachées.',
     },
     card1: {
-      title: 'L’APOTHICAIRE INTERDIT',
-      subtitle: 'Archives 1910–',
       description: 'La vérité cachée de la nature. Des connaissances et des techniques qui n’auraient jamais dû vous être dissimulées.',
-      buttonText: 'Ouvrir les archives →',
-      imageAlt: 'L’Apothicaire interdit – Archives de 1910',
+      imageAlt: 'Die verbotene Apotheke – Archives de 1910',
     },
     card2: {
-      title: 'Bibliothèque cachée',
-      subtitle: 'Le savoir du Saint Graal.',
       description: 'Écrits cachés, civilisations secrètes, savoir interdit et vérités spirituelles.',
-      buttonText: 'Entrer dans la bibliothèque →',
-      imageAlt: 'Bibliothèque cachée – Le savoir du Saint Graal',
+      imageAlt: 'Verborgene Bibliothek – Le savoir du Saint Graal',
     },
     footer: {
       quote: 'Des archives qui n’auraient jamais dû être vues, des expériences cachées et une intelligence interdite ; dans ces archives et ces écrits, l’avenir a déjà eu lieu.',
@@ -181,18 +157,12 @@ export const TRANSLATIONS: Record<SupportedLanguage, LanguageContent> = {
       subtitle: 'Aquí encontrará información, conocimientos y verdades ocultas.',
     },
     card1: {
-      title: 'LA BOTICA PROHIBIDA',
-      subtitle: 'Archivo 1910–',
       description: 'La verdad oculta de la naturaleza. Conocimientos y técnicas que nunca debieron haberle sido ocultados.',
-      buttonText: 'Abrir el archivo →',
-      imageAlt: 'La Botica Prohibida – Archivo 1910',
+      imageAlt: 'Die verbotene Apotheke – Archivo 1910',
     },
     card2: {
-      title: 'Biblioteca oculta',
-      subtitle: 'Conocimiento del Santo Grial.',
       description: 'Escritos ocultos, civilizaciones secretas, conocimiento prohibido y verdades espirituales.',
-      buttonText: 'Entrar en la biblioteca →',
-      imageAlt: 'Biblioteca oculta – Conocimiento del Santo Grial',
+      imageAlt: 'Verborgene Bibliothek – Conocimiento del Santo Grial',
     },
     footer: {
       quote: 'Archivos que nunca debieron ser vistos, experimentos ocultos e inteligencia prohibida; en estos archivos y escritos, el futuro ya ha sucedido.',
@@ -216,18 +186,12 @@ export const TRANSLATIONS: Record<SupportedLanguage, LanguageContent> = {
       subtitle: 'Aqui você encontra informações, conhecimentos e verdades ocultas.',
     },
     card1: {
-      title: 'A BOTICA PROIBIDA',
-      subtitle: 'Arquivo 1910–',
       description: 'A verdade oculta da natureza. Conhecimentos e técnicas que jamais deveriam ter sido escondidos de você.',
-      buttonText: 'Abrir o arquivo →',
-      imageAlt: 'A Botica Proibida – Arquivo 1910',
+      imageAlt: 'Die verbotene Apotheke – Arquivo 1910',
     },
     card2: {
-      title: 'Biblioteca Oculta',
-      subtitle: 'Conhecimento sobre o Santo Graal.',
       description: 'Escritos ocultos, civilizações secretas, conhecimentos proibidos e verdades espirituais.',
-      buttonText: 'Entrar na biblioteca →',
-      imageAlt: 'Biblioteca Oculta – Conhecimento sobre o Santo Graal',
+      imageAlt: 'Verborgene Bibliothek – Conhecimento sobre o Santo Graal',
     },
     footer: {
       quote: 'Arquivos que jamais deveriam ter sido vistos, experimentos ocultos e inteligência proibida; nesses arquivos e escritos, o futuro já aconteceu.',
