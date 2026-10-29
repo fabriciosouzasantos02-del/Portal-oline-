@@ -1,5 +1,10 @@
-import React, { createContext, useContext, useState } from 'react';
-import { LanguageContent, SupportedLanguage, TRANSLATIONS } from '../i18n';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import {
+  detectSupportedLanguage,
+  LanguageContent,
+  SupportedLanguage,
+  TRANSLATIONS,
+} from '../i18n';
 
 interface LanguageContextType {
   language: SupportedLanguage;
@@ -14,20 +19,23 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<SupportedLanguage>('de');
+  const [language, setLanguage] = useState<SupportedLanguage>(() => detectSupportedLanguage());
+  const content = useMemo(() => TRANSLATIONS[language] ?? TRANSLATIONS.de, [language]);
 
-  const setLanguage = (lang: SupportedLanguage) => {
-    setLanguageState(lang);
-  };
+  useEffect(() => {
+    document.documentElement.lang = language;
+
+    const contentLanguageMeta = document.querySelector<HTMLMetaElement>('meta[name="content-language"]');
+    contentLanguageMeta?.setAttribute('content', language);
+
+    const descriptionMeta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    descriptionMeta?.setAttribute('content', content.pageDescription);
+
+    document.title = content.pageTitle;
+  }, [content, language]);
 
   return (
-    <LanguageContext.Provider
-      value={{
-        language,
-        content: TRANSLATIONS[language] || TRANSLATIONS.de,
-        setLanguage,
-      }}
-    >
+    <LanguageContext.Provider value={{ language, content, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

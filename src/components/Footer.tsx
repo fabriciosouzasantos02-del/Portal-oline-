@@ -52,20 +52,23 @@ export const Footer: React.FC = () => {
           <GoldBotanicalMotif className="h-4 w-6 shrink-0 text-[#C9A45A]" />
           <span className="h-px w-12 bg-gradient-to-l from-transparent via-[#C9A45A]/60 to-[#C9A45A] sm:w-20" />
         </div>
-        <nav aria-label="Redes sociais e contato" className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-          {SOCIAL_LINKS.map(({ label, href, icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={label}
-              title={label}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A45A]/45 bg-[#07110D]/75 text-[#E5C77A] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#E5C77A] hover:bg-[#C9A45A]/15 hover:text-[#FFF1B7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C77A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#07110D]"
-            >
-              <SocialIcon name={icon} />
-            </a>
-          ))}
+        <nav aria-label={content.accessibility.socialLinks} className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+          {SOCIAL_LINKS.map(({ label, href, icon }) => {
+            const accessibleLabel = icon === 'email' ? content.accessibility.emailLink : label;
+            return (
+              <a
+                key={icon}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={accessibleLabel}
+                title={accessibleLabel}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A45A]/45 bg-[#07110D]/75 text-[#E5C77A] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#E5C77A] hover:bg-[#C9A45A]/15 hover:text-[#FFF1B7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C77A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#07110D]"
+              >
+                <SocialIcon name={icon} />
+              </a>
+            );
+          })}
         </nav>
       </div>
     </footer>
